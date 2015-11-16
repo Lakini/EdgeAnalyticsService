@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.wso2.edgeanalyticsservice" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="EdgeAnalyticsService"
+        android:theme="@style/AppTheme"
+        android:process=":process1">
+        <activity
+            android:name="org.wso2.edgeanalyticsservice.MainActivity"
+            android:label="EdgeAnalyticsServices" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="org.wso2.edgeanalyticsservice.EdgeAnalyticsService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="org.wso2.edgeanalyticsservice.EdgeAnalyticsService" />
+
+            </intent-filter>
+        </service>
+
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+
+
+</manifest>
