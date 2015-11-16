@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "23.0.0 rc3"
+
+    defaultConfig {
+        applicationId "org.wso2.edgeanalyticsservice"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile files('libs/antlr-runtime_3.2.0.wso2v1.jar')
+    compile files('libs/antlr_3.2.0.wso2v1.jar')
+    compile files('libs/stringtemplate-3.2.1.jar')
+    compile files('libs/commons-pool_1.5.6.wso2v1.jar')
+    compile files('libs/log4j-1.2.17.jar')
+    compile files('libs/mvel2_2.1.0.wso2v1.jar')
+    compile files('libs/siddhi-api_2.1.0.wso2v1.jar')
+    compile files('libs/siddhi-core_2.1.0.wso2v1.jar')
+    compile files('libs/siddhi-query_2.1.0.wso2v1.jar')
+    compile files('libs/json-20140107.jar')
+    }
